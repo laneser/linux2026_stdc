@@ -6,6 +6,12 @@ test_cache_exp
 # Experiment outputs (regenerable, root-level only)
 /results.csv
 /sysinfo.txt
+*.svg
+!cache_exp_centerm1.svg
+!cache_exp_82a9c2eae741.svg
+!cache_exp_rasberrypi.svg
+!cache_exp_combined.svg
+
 # Keep per-machine results (results_<machine>/)
 !results_*/
 
