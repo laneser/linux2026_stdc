@@ -1,0 +1,10 @@
+hostname: rasberrypi
+kernel: 6.12.62-v8
+arch: aarch64
+cpu: Cortex-A53
+cores: 4
+L1d cache:                               128 KiB (4 instances)
+L1i cache:                               128 KiB (4 instances)
+L2 cache:                                512 KiB (1 instance)
+profiler: perf
+date: 2026-03-22T21:23:54+08:00

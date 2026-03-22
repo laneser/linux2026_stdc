@@ -1,0 +1,11 @@
+hostname: 82a9c2eae741
+kernel: 6.6.87.2-microsoft-standard-WSL2
+arch: x86_64
+cpu: AMD Ryzen 7 9800X3D 8-Core Processor
+cores: 16
+L1d cache:                            384 KiB (8 instances)
+L1i cache:                            256 KiB (8 instances)
+L2 cache:                             8 MiB (8 instances)
+L3 cache:                             96 MiB (1 instance)
+profiler: cachegrind
+date: 2026-03-22T13:23:56+00:00

@@ -1,0 +1,19 @@
+# Build artifacts
+cache_exp
+cache_exp_dbg
+test_cache_exp
+
+# Experiment outputs (regenerable, root-level only)
+/results.csv
+/sysinfo.txt
+*.svg
+
+# Keep per-machine results (results_<machine>/)
+!results_*/
+
+# Valgrind / Cachegrind
+cachegrind.out.*
+
+# Editor
+*.swp
+*~
