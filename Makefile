@@ -39,4 +39,4 @@ results.csv: cache_exp run_exp.sh
 
 clean:
 	rm -f cache_exp test_cache_exp results.csv sysinfo.txt
-	rm -f cache_exp*.svg cachegrind.out.*
+	rm -f cachegrind.out.*
