@@ -86,7 +86,7 @@ perf stat -e cache-references,cache-misses,cycles,instructions \
 
 #### Raspberry Pi（Cortex-A53, L1d = 32 KB, L2 = 512 KB）— perf stat
 
-![Raspberry Pi cache experiment](cache_exp_rasberrypi.svg)
+![Raspberry Pi cache experiment](https://raw.githubusercontent.com/laneser/linux2026_stdc/main/cache_exp_rasberrypi.svg)
 
 Pi 的 `cache-misses` 計數器量測 **L1d miss**。Shuffled 模式的 cache miss 比較：
 
@@ -106,7 +106,7 @@ Pi 的 `cache-misses` 計數器量測 **L1d miss**。Shuffled 模式的 cache mi
 
 #### Intel Celeron J1800（L1d = 48 KB, L2 = 1 MB）— perf stat
 
-![Intel J1800 cache experiment](cache_exp_centerm1.svg)
+![Intel J1800 cache experiment](https://raw.githubusercontent.com/laneser/linux2026_stdc/main/cache_exp_centerm1.svg)
 
 J1800 的 `cache-misses` 計 **LLC (L2) miss**。Shuffled 模式：
 
@@ -122,11 +122,15 @@ J1800 的 `cache-misses` 計 **LLC (L2) miss**。Shuffled 模式：
 
 #### DevContainer（Ryzen 7 9800X3D, L1d = 384 KB, L2 = 8 MB, L3 = 96 MB）— cachegrind
 
-![DevContainer cachegrind experiment](cache_exp_devcontainer.svg)
+![DevContainer cachegrind experiment](https://raw.githubusercontent.com/laneser/linux2026_stdc/main/cache_exp_82a9c2eae741.svg)
 
 cachegrind 模擬的 D1 miss 在 5K 節點時 fast 為 35.6%、single 為 38.4%（差 2.8 pp），與 Pi 的趨勢一致。大 list 因記憶體需求過高（個別 malloc + spacer）而被跳過。
 
-> 完整實驗程式碼見 [`cache_exp.c`](https://github.com/laneser/linux2026-stdc/blob/main/cache_exp.c)。
+#### 三平台比較
+
+![Cross-platform comparison](https://raw.githubusercontent.com/laneser/linux2026_stdc/main/cache_exp_combined.svg)
+
+> 完整實驗程式碼見 [`cache_exp.c`](https://github.com/laneser/linux2026_stdc/blob/main/cache_exp.c)。
 > 讀者可在自己的機器上執行 `make bench plot` 重現實驗並產生 SVG 圖表。
 
 ### cache miss rate 是否隨 linked list 長度增加而擴大？
