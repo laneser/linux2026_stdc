@@ -65,7 +65,7 @@ static volatile struct list_node *sink;
 static struct list_node *volatile sink;
 ```
 
-根據 C99 §6.7.3，`volatile T *p` 表示 `*p` 是 volatile，但 `p` 本身的賦值可被最佳化掉。`T *volatile p` 才能確保對 `p` 的寫入保留。
+根據 C99 §6.7.3，`volatile T *p` 表示 `*p` 是 volatile，但對 `p` 本身的指派可被最佳化掉。`T *volatile p` 才能確保對 `p` 的寫入保留。
 
 ### 使用 perf stat 測量
 
